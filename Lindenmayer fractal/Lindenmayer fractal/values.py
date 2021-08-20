@@ -2,7 +2,7 @@
 """
 Created on Thu Aug 19 19:10:21 2021
 
-@author: iambe
+@author: Nathan Bitzko
 """
 class Values:
     
