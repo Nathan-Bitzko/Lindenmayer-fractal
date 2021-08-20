@@ -1,9 +1,7 @@
 # Lindenmayer-fractal
 python program to generate Lindenmayer fractals
 
-#ToDo - add loading bar, big fractals can take a while to generate with no indication that it is happening to the user
-#ToDo - create fractal pre sets and allow them to be loaded into the program on user request
-#ToDo - allow user saving of fractal settings
+#ToDo - add loading bar, big fractals can take a while to generate with no indication that it is happening to the user, create fractal pre sets and allow them to be loaded into the program on user request, and allow user saving of fractal settings
 
 
 axiom is the starting rule. ignore vars are vars to draw a transparent line for angle is 
