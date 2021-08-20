@@ -81,7 +81,10 @@ def drawFractal():
     fractal.after(100, drawFractalfinal, p)
 
 #gui will hang when opening large images but there is nothing i can do about that
-#since all tkinter call must be in the main thread
+#since all tkinter calls must be in the main thread and fractal must be an image
+#which can result in a long decompresion time. an image allows for fast scrolling
+#and zooming, drawing lines right on the canvas grinds to a crawl after a couple
+#hundred lines
 def drawFractalfinal(p):
     if p.is_alive():
         fractal.after(200, drawFractalfinal, p)
