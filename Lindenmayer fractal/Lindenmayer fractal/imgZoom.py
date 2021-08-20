@@ -69,7 +69,7 @@ class CanvasImage:
         self.__huge = False  # huge or not
         self.__huge_size = 14000  # define size of the huge image
         self.__band_width = 1024  # width of the tile band
-        Image.MAX_IMAGE_PIXELS = 1000000000  # suppress DecompressionBombError for the big image
+        Image.MAX_IMAGE_PIXELS = 2000000000  # suppress DecompressionBombError for the big image
         with warnings.catch_warnings():  # suppress DecompressionBombWarning
             warnings.simplefilter('ignore')
             self.__image = Image.open(self.path)  # open image, but down't load it

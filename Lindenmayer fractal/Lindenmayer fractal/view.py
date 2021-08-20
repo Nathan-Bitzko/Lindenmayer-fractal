@@ -2,7 +2,7 @@
 """
 Created on Tue Aug 17 13:21:06 2021
 
-Lindenmayer fractal view
+Lindenmayer fractal view (scripted on windows, only tested on windows)
 
 @author: nathan bitzko
 """
@@ -58,6 +58,7 @@ def getVar():
     except:
         return -1
 
+#threading is to prevent the gui from freezing rather than for speed
 def runThreads():
     global lastThread
     if len(threadQueue) > 0 and not lastThread.is_alive():
@@ -69,6 +70,7 @@ def runThreads():
 """
 event handlers
 """
+#big fractals are process intensive so they are generated in seperate process
 def drawFractal():
     sem.acquire()
     argOne = vals.getRules()
@@ -78,6 +80,8 @@ def drawFractal():
     sem.release()
     fractal.after(100, drawFractalfinal, p)
 
+#gui will hang when opening large images but there is nothing i can do about that
+#since all tkinter call must be in the main thread
 def drawFractalfinal(p):
     if p.is_alive():
         fractal.after(200, drawFractalfinal, p)
