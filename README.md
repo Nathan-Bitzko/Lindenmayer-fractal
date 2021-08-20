@@ -1,6 +1,8 @@
 # Lindenmayer-fractal
 python program to generate Lindenmayer fractals
 
+#ToDo - add loading bar, big fractals can take a while to generate with no indication that it is happening to the user
+
 axiom is the starting rule. ignore vars are vars to draw a transparent line for angle is 
 the angle to turn when a + or - is found. - turns right + turns left. "[" logs current 
 location and angle and "]" returns to last logged location. iterations is the number times 
